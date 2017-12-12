@@ -1,10 +1,14 @@
+var list = document.getElementById('list');
+var add = document.getElementById('addElem');
 
+add.addEventListener('click', function() {
 
-var buttons = document.getElementsByClassName('button');
-var buttonLength = buttons.length;
+    var element = document.createElement('li');
+    var liElem = document.getElementsByTagName('li'); 
+    var nextNumber = liElem.length;
+    element.innerHTML = 'item ' + nextNumber;
+    list.appendChild(element);
+    
+  });
 
-
-    for (var a = 0 ; a < buttonLength ; a++) {
-    var buttonText = buttons[a].innerText;
-    console.log('button ' + a + ' text is ' + buttonText);
-}
+  
